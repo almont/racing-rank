@@ -32,19 +32,15 @@ const parseData = (data) => {
         }
     );
 
-    // Group laps by pilot name
+    // Group by pilot name
     const laps = _.chain(table)
                     .groupBy('pilotCod')
                     .map((value, key) => (value))
                     .value();
-
-    // Order by completed lap DESC
-    // const ranking = _.orderBy(laps, ['length'], ['desc']);
     
     // Building ranking table
     const rankingTable = [];
     
-    // _.forEach(ranking, (value) => {
     _.forEach(laps, (value) => {
         
         let cell;
@@ -70,7 +66,6 @@ const parseData = (data) => {
         };
 
         rankingTable.push(cell);
-        
     });
 
     // Order by time lap ASC
