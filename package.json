@@ -1,0 +1,27 @@
+{
+  "author": "Andre Monteiro <andre.swf@gmail.com>",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel dev:server",
+    "dev:server": "webpack-dev-server --hot --inline",
+    "watch": "webpack -w -d",
+    "build": "webpack -p"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "eslint": "^5.10.0",
+    "eslint-watch": "^4.0.2",
+    "npm-run-all": "^4.0.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0"
+  }
+}
